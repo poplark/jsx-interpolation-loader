@@ -1,0 +1,35 @@
+{
+  "name": "jsx-interpolation-loader",
+  "version": "0.0.1",
+  "description": "Interpolate values dynamically into jsx code before the babel-loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poplark/jsx-interpolation-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "jsx",
+    "loader",
+    "interpolation",
+    "webpack loader",
+    "jsx loader",
+    "jsx interpolation"
+  ],
+  "author": "poplark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poplark/jsx-interpolation-loader/issues"
+  },
+  "homepage": "https://github.com/poplark/jsx-interpolation-loader#readme",
+  "dependencies": {
+    "handlebars": "^4.0.11"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.5",
+    "webpack": "^4.16.0"
+  }
+}
