@@ -5,4 +5,6 @@
 [README in English](README.md)
 
 - todo
+- example
+- test case
 - enforce: pre
