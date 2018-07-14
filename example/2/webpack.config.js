@@ -8,7 +8,7 @@ module.exports = {
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../../dist/example/1')
+    path: path.resolve(__dirname, '../../dist/example/2')
   },
   resolve: {
     extensions: ['.js', '.jsx']
@@ -16,25 +16,31 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx|mjs)$/,
+        enforce: 'pre',
+        use: [
+          {
+            loader: require.resolve('../../index'),
+            options: {
+              rules: [
+                {
+                  filename: /app.jsx/,
+                  interpolations: {
+                    foo: 'foo2',
+                    bar: 'bar2'
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }, {
         oneOf: [
           {
             test: /\.(js|jsx|mjs)$/,
             use: [
               {
                 loader: require.resolve('babel-loader'),
-              }, {
-                loader: require.resolve('../../index'),
-                options: {
-                  rules: [
-                    {
-                      filename: /app.jsx/,
-                      interpolations: {
-                        foo: 'foo1',
-                        bar: 'bar1'
-                      }
-                    }
-                  ]
-                }
               }
             ]
           }
