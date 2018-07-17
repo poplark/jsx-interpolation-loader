@@ -4,7 +4,13 @@
   "description": "Interpolate values dynamically into jsx code before the babel-loader",
   "main": "index.js",
   "scripts": {
-    "test": "echo test"
+    "build:1": "cd example/1 && node ../build.js",
+    "build:2": "cd example/2 && node ../build.js",
+    "build:3": "cd example/3 && node ../build.js",
+    "test:1": "npm run build:1 && serve dist/example/1",
+    "test:2": "npm run build:2 && serve dist/example/2",
+    "test:3": "npm run build:3 && serve dist/example/3",
+    "test": "npm run test:3"
   },
   "repository": {
     "type": "git",
