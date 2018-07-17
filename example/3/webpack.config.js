@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+let routes = require('./routes');
 
 module.exports = {
   mode: 'development',
@@ -27,8 +28,7 @@ module.exports = {
                 {
                   filename: /app.jsx/,
                   interpolations: {
-                    foo: 'foo3',
-                    bar: 'bar3'
+                    routes: routes
                   }
                 }
               ]

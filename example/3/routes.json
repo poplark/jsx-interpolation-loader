@@ -1,0 +1,15 @@
+[
+  {
+    "name": "home",
+    "path": "/",
+    "filepath": "index.jsx"
+  }, {
+    "name": "one",
+    "path": "/one",
+    "filepath": "one.jsx"
+  }, {
+    "name": "two",
+    "path": "/two",
+    "filepath": "two.jsx"
+  }
+]
