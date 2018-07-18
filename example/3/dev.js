@@ -3,7 +3,10 @@ const webpack = require('webpack');
 const webpackDevServer = require('webpack-dev-server');
 const config = require('./webpack.config');
 
-config['entry'].unshift('webpack-dev-server/client?http://localhost:3000/', 'webpack/hot/dev-server');
+const HOST = 'localhost',
+  PORT = 3000;
+
+config['entry'].unshift(`webpack-dev-server/client?http://${HOST}:${PORT}/`, 'webpack/hot/dev-server');
 
 const compiler = webpack(config);
 const server = new webpackDevServer(compiler, {
@@ -19,4 +22,10 @@ const server = new webpackDevServer(compiler, {
   }
 });
 
-server.listen(3000);
+server.listen(PORT, HOST, err => {
+  if (err) {
+      return console.error(err);
+  }
+  console.log('Starting...');
+  console.log(`Please visit at ${HOST}:${PORT} after building`);
+});

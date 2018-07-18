@@ -1,6 +1,6 @@
 const handlebars = require('handlebars');
 
-module.exports = function(source){
+module.exports = function(source) {
   const rules = this.query.rules || [];
 
   for (let rule of rules) {
