@@ -4,7 +4,8 @@
   "description": "Interpolate values dynamically into jsx code before the babel-loader",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "README-zh_CN.md"
   ],
   "scripts": {
     "build:1": "cd example/1 && node ../build.js",
