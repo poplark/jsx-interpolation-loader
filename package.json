@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Interpolate values dynamically into jsx code before the babel-loader",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "build:1": "cd example/1 && node ../build.js",
     "build:2": "cd example/2 && node ../build.js",
