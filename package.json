@@ -1,6 +1,6 @@
 {
   "name": "jsx-interpolation-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interpolate values dynamically into jsx code before the babel-loader",
   "main": "index.js",
   "files": [
