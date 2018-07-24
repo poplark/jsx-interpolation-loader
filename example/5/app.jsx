@@ -12,29 +12,29 @@ export default class App extends Component {
     return (
       <Router>
         <div className="test">
-          <h1>handlebars</h1>
+          <h1>ejs</h1>
           <ul className="navs">
-            {{#each routes}}
-              <li key="{{this.path}}">
-                <Link to="{{this.path}}">{{this.name}}</Link>
+            <% routes.forEach(function(route) {%>
+              <li key="<%=route.path%>">
+                <Link to="<%=route.path%>"><%=route.name%></Link>
               </li>
-            {{/each}}
+            <%})%>
           </ul>
           <div className="content">
             <Switch>
-              {{#each routes}}
-                <Route path="{{this.path}}" exact
+              <% routes.forEach(function(route) {%>
+                <Route path="<%=route.path%>" exact
                   component={(props) => {
                     return (
                       <Bundle load={() => import(
-                        /* webpackChunkName: "{{this.name}}" */
-                        './pages/{{this.filepath}}'
+                        /* webpackChunkName: "<%=route.name%>" */
+                        './pages/<%=route.filepath%>'
                       )}>
                           {(Comp) => <Comp {...props}/>}
                       </Bundle>
                     )
                   }}/>
-              {{/each}}
+              <%})%>
             </Switch>
           </div>
         </div>
