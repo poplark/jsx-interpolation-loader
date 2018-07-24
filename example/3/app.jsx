@@ -12,6 +12,7 @@ export default class App extends Component {
     return (
       <Router>
         <div className="test">
+          <h1>handlebars</h1>
           <ul className="navs">
             {{#each routes}}
               <li key="{{this.path}}">
